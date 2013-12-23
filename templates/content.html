@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+{% for interview in list %}
+    <div>
+        <a href = "/interviews/show/{{interview.id}}/">{{interview.title}}</a>
+        <br/>
+        {{interview.content|slice:":500"}}...
+        <br/>
+    </div>
+    <br />
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+    <h2>{{interview.title}}</h2>
+    
+    <p>
+        {{interview.content}}
+    </p>
+    Comments:
+    {% for comment in interview.comments.all %}
+        <br/>
+        <div id="comment">
+            {{comment.content}}
+            <br/>
+            added by: {{comment.login}}
+        </div>
+    {% endfor %}
+    <br/>
+    Add comment:<br/>
+        <form action="/interviews/add_comment/" method="post">
+            
+            <input type="text" name="login" value="" />
+            <input type="submit" value="Add">
+            <br/>
+            <textarea name="content"></textarea>
+            <input type="hidden" name="id" value="{{interview.id}}">
+        </form>
+
+{% endblock %}

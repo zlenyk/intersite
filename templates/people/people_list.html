@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+    {% for person in list %}
+        <ul>
+            <li><a href="/people/show/{{person.id}}/">{{person}}</a></li>
+        </ul>
+    {% endfor %}
+{% endblock %}
