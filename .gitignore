@@ -5,3 +5,4 @@ local_settings.py
 setting.py
 manage.py
 __init.py__
+*~
