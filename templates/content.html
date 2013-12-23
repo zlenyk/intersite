@@ -2,7 +2,7 @@
 {% load url from future %}
 {% block content %}
 {% for interview in list %}
-    <div>
+    <div id='interview'>
         <a href = "/interviews/show/{{interview.id}}/">{{interview.title}}</a>
         <br/>
         {{interview.content|slice:":500"}}...
