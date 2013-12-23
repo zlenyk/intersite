@@ -4,7 +4,8 @@ html{
     width:99%;
 }
 body{
-    padding:2px;
+    padding:50px;
+    background-color:red;
     background-image:url('images/background.jpg');
     background-attachment:fixed;
 }
